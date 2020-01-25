@@ -45,10 +45,10 @@ $(document).ready(function() {
     $('.side-img-name').html(html);
   }
 
-  let orgsData = $.ajax(`https://api.github.com/users/ramonaspence/orgs?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+  let orgsPhotos = $.ajax(`https://api.github.com/users/ramonaspence/orgs?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
     .done((resp) => {
       // console.log(resp);
-      updateOrgsData(resp);
+      updateOrgsPhotos(resp);
     })
     .fail((err) => {
       console.log(err);
@@ -57,7 +57,7 @@ $(document).ready(function() {
       // console.log('always fires');
     });
 
-  let updateOrgsData = (data) => {
+  let updateOrgsPhotos = (data) => {
     let source = $("#orgs-template").html();
     let template = Handlebars.compile(source);
     let context = data;
@@ -67,6 +67,26 @@ $(document).ready(function() {
 
   }
 
+  // let orgsLinks = $.ajax(`https://api.github.com/orgs/ccs-student-submissions?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+  //   .done((resp) => {
+  //     updateOrgsLinks(resp);
+  //   })
+  //   .fail((err) => {
+  //     console.log(err);
+  //   })
+  //   .always(() => {
+  //     // console.log('always fires');
+  //   });
+  //
+  // let updateOrgsLinks = (data) => {
+  //   let source = $("#orglink-template").html();
+  //   console.log(source);
+  //   let template = Handlebars.compile(source);
+  //   let context = data;
+  //   let html = template(data);
+  //
+  //   $('.orgs').html(html);
+  // }
 
 
 });
