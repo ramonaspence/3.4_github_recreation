@@ -148,7 +148,20 @@ button {
   overflow: hidden;
 }
 
-.orgs img {
+.orgOne {
+  display: inline;
+}
+
+.orgTwo {
+  display: inline;
+}
+
+.orgOne img {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.orgTwo img {
   width: 2.2rem;
   height: 2.2rem;
 }

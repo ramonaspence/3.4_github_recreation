@@ -45,31 +45,10 @@ $(document).ready(function() {
     $('.side-img-name').html(html);
   }
 
-  let orgsPhotos = $.ajax(`https://api.github.com/users/ramonaspence/orgs?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
-    .done((resp) => {
-      // console.log(resp);
-      updateOrgsPhotos(resp);
-    })
-    .fail((err) => {
-      console.log(err);
-    })
-    .always(() => {
-      // console.log('always fires');
-    });
-
-  let updateOrgsPhotos = (data) => {
-    let source = $("#orgs-template").html();
-    let template = Handlebars.compile(source);
-    let context = data;
-    let html = template({orgs: data});
-    // console.log(html);
-    $('.orgs').html(html);
-
-  }
-
-  // let orgsLinks = $.ajax(`https://api.github.com/orgs/ccs-student-submissions?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+  // let orgsPhotos = $.ajax(`https://api.github.com/users/ramonaspence/orgs?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
   //   .done((resp) => {
-  //     updateOrgsLinks(resp);
+  //     // console.log(resp);
+  //     updateOrgsPhotos(resp);
   //   })
   //   .fail((err) => {
   //     console.log(err);
@@ -78,15 +57,57 @@ $(document).ready(function() {
   //     // console.log('always fires');
   //   });
   //
-  // let updateOrgsLinks = (data) => {
-  //   let source = $("#orglink-template").html();
-  //   console.log(source);
+  // let updateOrgsPhotos = (data) => {
+  //   let source = $("#orgs-template").html();
   //   let template = Handlebars.compile(source);
   //   let context = data;
-  //   let html = template(data);
-  //
+  //   let html = template({orgs: data});
+  //   // console.log(html);
   //   $('.orgs').html(html);
+  //
   // }
+
+  let orgOne = $.ajax(`https://api.github.com/orgs/ccs-student-submissions?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+    .done((resp) => {
+      updateOrgOne(resp);
+    })
+    .fail((err) => {
+      console.log(err);
+    })
+    .always(() => {
+      // console.log('always fires');
+    });
+
+  let updateOrgOne = (data) => {
+    let source = $("#orgOne_template").html();
+    console.log(source);
+    let template = Handlebars.compile(source);
+    let context = data;
+    let html = template(data);
+
+    $('.orgOne').html(html);
+  }
+
+  let orgTwo = $.ajax(`https://api.github.com/orgs/ccs-winter-2020?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+    .done((resp) => {
+      updateOrgTwo(resp);
+    })
+    .fail((err) => {
+      console.log(err);
+    })
+    .always(() => {
+      // console.log('always fires');
+    });
+
+  let updateOrgTwo = (data) => {
+    let source = $("#orgTwo_template").html();
+    console.log(source);
+    let template = Handlebars.compile(source);
+    let context = data;
+    let html = template(data);
+
+    $('.orgTwo').html(html);
+  }
 
 
 });

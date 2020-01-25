@@ -46,8 +46,9 @@
       <aside>
         <div class="side-bar col-4">
           <section class="side-img-name"></section>
-          <span class="org-span">Organizations</span>
-          <div class="orgs"></div>
+          <h6 class="org-title">Organizations</h6>
+          <div class="orgOne"></div>
+          <div class="orgTwo"></div>
         </div>
       </aside>
 
@@ -114,13 +115,14 @@
 
 </script>
 
-  <script id="orgs-template" type="text/x-handlebars-template">
-    {{#orgs}}
-      <a href=""><img src="{{avatar_url}}" alt="" /></a>
-    {{/orgs}}
+
+  <script id="orgOne_template" type="text/x-handlebars-template">
+    <a href="{{html_url}}"><img src="{{avatar_url}}" alt ="" /></a>
   </script>
 
-
+  <script id="orgTwo_template" type="text/x-handlebars-template">
+    <a href="{{html_url}}"><img src="{{avatar_url}}" alt ="" /></a>
+  </script>
 
 
 
