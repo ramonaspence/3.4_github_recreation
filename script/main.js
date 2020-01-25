@@ -35,6 +35,7 @@ $(document).ready(function() {
       // console.log('always fires');
     });
 
+
   let updateUserData = (data) => {
     let source = $("#bio-template").html();
     let template = Handlebars.compile(source);
