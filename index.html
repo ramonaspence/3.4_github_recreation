@@ -7,48 +7,105 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <div class="container-fluid">
-    <div class="nav-header row">
-      <section class="nav-left col-3">
-        <input type="search" id="git_search" placeholder="Search or jumpt to...">
-      </section>
-      <section class="nav-main col-9">
-        <a href="#"><h3>Pull Requests</h3></a>
-        <a href="#"><h3>Issues</h3></a>
-        <a href="#"><h3>Marketplace</h3></a>
-        <a href="#"><h3>Explore</h3></a>
-      </section>
+      <div class="nav-header row no-gutters">
+        <section class="nav-left col-3">
+          <i class="fab fa-github"></i>
+          <input type="search" id="git_search" placeholder="Search or jump to...">
+        </section>
+        <section class="nav-main col-9">
+          <a href="#">
+            <h3>Pull Requests</h3>
+          </a>
+          <a href="#">
+            <h3>Issues</h3>
+          </a>
+          <a href="#">
+            <h3>Marketplace</h3>
+          </a>
+          <a href="#">
+            <h3>Explore</h3>
+          </a>
+          <i class="fas fa-bell"></i>
+          <i class="fas fa-plus"></i>
+        </section>
       </div>
   </header>
   <div class="main-container container">
     <div class="row">
-    <main class="main col-9 offset-3">
-      <div class="profile-nav">
-        <button class="pro-nav-buttons"><span>Overview</span></button>
-        <button class="pro-nav-buttons"><span>Repositories</span></button>
-        <button class="pro-nav-buttons"><span>Projects</span></button>
-        <button class="pro-nav-buttons"><span>Packages</span></button>
-        <button class="pro-nav-buttons"><span>Stars</span></button>
-        <button class="pro-nav-buttons"><span>Followers</span></button>
-        <button class="pro-nav-buttons"><span>Folowing</span></button>
-      </div>
-      <div class="search-repos">
-        <button class="type"></button>
-        <button class="Language"></button>
-        <button class="New"></button>
+      <main class="main col-9">
+        <div class="profile-nav">
+          <button class="pro-nav-buttons"><span>Overview</span></button>
+          <button class="pro-nav-buttons"><span>Repositories</span></button>
+          <button class="pro-nav-buttons"><span>Projects</span></button>
+          <button class="pro-nav-buttons"><span>Packages</span></button>
+          <button class="pro-nav-buttons"><span>Stars</span></button>
+          <button class="pro-nav-buttons"><span>Followers</span></button>
+          <button class="pro-nav-buttons"><span>Folowing</span></button>
+        </div>
+        <div class="search-repos">
+          <input type="search" placeholder="Find a repository...">
+          <button class="type">Type</button>
+          <button class="Language">Language</button>
+          <button class="New">Create Repo</button>
+        </div>
+        <div class="repo-list"></div>
 
 
 
+    </div>
 
-      <aside></aside>
 
   </div>
   </main>
+  <aside>
+    <div class="side-bar col-3">
+      <section class="side-img-name"></section>
+      <span class="org-span">Organizations</span>
+      <div class="orgs"></div>
+    </div>
+  </aside>
   </div>
+
+
+
+
+
+
+  <script id="repo_template" type="text/x-handlebars-template">
+    {{#repos}}
+      <div class="repo-card">
+        <a href="{{html_url}}" class="repo-name">
+          <h2>{{name}}</h2>
+        </a>
+        <span>{{language}}</span>
+        <span>{{updated_at}}</span>
+        <button class="star">Star</button>
+      </div>
+    {{/repos}}
+  </script>
+
+  <script id="bio-template" type="text/x-handlebars-template">
+    <section class="img-status">
+    <img src="{{avatar_url}}" alt=""/>
+  </section>
+  <section class="name-login">
+    <h1>{{name}}</h1>
+    <h4>{{login}}</h1>
+  </section>
+
+</script>
+
+  <script id="orgs-template" type="text/x-handlebars-template">
+    {{#orgs}}
+    <img src="{{avatar_url}}" alt="" />
+  {{/orgs}}
+</script>
 
 
 
@@ -57,8 +114,10 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
 
   <script src="script/config.js"></script>
   <script src="script/main.js"></script>
