@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
 <body>
@@ -38,6 +38,15 @@
   </header>
   <div class="main-container container">
     <div class="row">
+
+      <aside>
+        <div class="side-bar col-3">
+          <section class="side-img-name"></section>
+          <span class="org-span">Organizations</span>
+          <div class="orgs"></div>
+        </div>
+      </aside>
+
       <main class="main col-9">
         <div class="profile-nav">
           <button class="pro-nav-buttons"><span>Overview</span></button>
@@ -58,18 +67,12 @@
 
 
 
-    </div>
 
 
-  </div>
-  </main>
-  <aside>
-    <div class="side-bar col-3">
-      <section class="side-img-name"></section>
-      <span class="org-span">Organizations</span>
-      <div class="orgs"></div>
+
+      </main>
+
     </div>
-  </aside>
   </div>
 
 
@@ -103,9 +106,9 @@
 
   <script id="orgs-template" type="text/x-handlebars-template">
     {{#orgs}}
-    <img src="{{avatar_url}}" alt="" />
-  {{/orgs}}
-</script>
+      <img src="{{avatar_url}}" alt="" />
+    {{/orgs}}
+  </script>
 
 
 
