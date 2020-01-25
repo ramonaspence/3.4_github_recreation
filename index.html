@@ -18,7 +18,7 @@
           <i class="fab fa-github"></i>
           <input type="search" id="git_search" placeholder="Search or jump to...">
         </section>
-        <section class="nav-main col-9">
+        <section class="nav-main col-6">
           <a href="#">
             <h3>Pull Requests</h3>
           </a>
@@ -31,10 +31,12 @@
           <a href="#">
             <h3>Explore</h3>
           </a>
+          </section>
+          <section class="nav-right col-3">
           <i class="fas fa-bell"></i>
           <i class="fas fa-plus"></i>
-
         </section>
+
       </div>
     </div>
   </header>
@@ -114,7 +116,7 @@
 
   <script id="orgs-template" type="text/x-handlebars-template">
     {{#orgs}}
-      <a href="{{url.html_url}}"><img src="{{avatar_url}}" alt="" /></a>
+      <a href=""><img src="{{avatar_url}}" alt="" /></a>
     {{/orgs}}
   </script>
 

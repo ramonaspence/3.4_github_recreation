@@ -8,6 +8,7 @@ header {
 }
 
 h3 {
+  font-size: 1.5rem;
   display: inline;
   margin-left: 10px;
   text-decoration: none;
@@ -34,12 +35,36 @@ button {
   height: 6rem;
   width: 100%;
   display: flex;
+  flex-direction: row;
+}
+
+.nav-main {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .nav-left input {
   width: 25rem;
-  margin-left: 10px;
+  margin-left: 2rem;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main {
+  margin-left: 3rem;
+  margin-top: 3rem;
 }
 
 .profile-nav {
@@ -47,8 +72,8 @@ button {
 }
 
 .pro-nav-buttons {
-  font-size: 2.2rem;
-  padding: 2px 12px;
+  font-size: 2.4rem;
+  padding: 2px 20px;
   margin: 15px 5px;
 }
 
