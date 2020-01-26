@@ -1,268 +1,308 @@
-* {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-// a {
-//   text-decoration: none;
-//   color: white;
-// }
+  * {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  // a {
+  //   text-decoration: none;
+  //   color: white;
+  // }
 
-header {
-  background-color: black;
-}
+  header {
+    background-color: black;
+  }
 
-h3 {
-  font-size: 1.5rem;
+  h3 {
+    font-size: 1.5rem;
+    display: inline;
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+  }
+
+  button {
+    border: none;
+    color: inherit;
+  }
+  // img {
+  //   width: 50px;
+  //   height: 50px;
+  // }
+
+  .fa-github {
+    width: 3rem;
+    height: 3rem;
+    margin: 5px;
+    padding: 5px;
+    font-size: 3rem;
+    color: white;
+  }
+
+  .nav-header {
+    background-color: black;
+    color: white;
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .nav-main {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .nav-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .nav-left input {
+    width: 25rem;
+    margin-left: 2rem;
+  }
+
+  .nav-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+  }
+
+  .fa-caret-down {
+    margin: 10px 5px;
+  }
+
+  .nav-right i {
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 10px;
+  }
+
+  .nav-avatar {
+    height: 20px;
+    width: 20px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+  }
+
+  .main {
+      margin-left: 3rem;
+      margin-top: 3rem;
+  }
+
+  .profile-nav {
+    border-bottom: solid 1px #E1E4E8;
+  }
+
+  .pro-nav-buttons {
+    font-size: 2.2rem;
+    padding: 2px 10px;
+    margin: 10px 5px;
+    // border-bottom:  solid, 1px, #E1E4E8;
+  }
+
+  .nav-span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #E1E4E8;
+    width: 4px;
+    height: 4px;
+    border: 3px solid #E1E4E8;
+    border-radius: 50%;
+    padding-right: 6px;
+    padding-left: 6px;
+    margin-left: 5px;
+
+  }
+
+  .search-repos {
+    border-bottom: solid 1px #E1E4E8;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .search-repos input {
+    width: 50rem;
+    margin-right: 8px;
+    border: solid 1px #E1E4E8;
+    border-radius: 3px;
+    font-size: 1.4rem;
+    color: #E1E4E8;
+    align-self: center;
+
+
+
+  }
+
+  .search-repos button {
+    color: black;
+    background-color: #eff3f6;
+    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+    font-size: 1.4rem;
+    line-height: 20px;
+    padding: 6px 12px;
+    margin-right: 8px;
+    border: 1px solid #E1E4E8;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    align-self: flex-end;
+
+  }
+
+  .repo-list {
+    margin: 20px 10px;
+  }
+
+  .repo-card {
+    border-bottom: solid 1px #E1E4E8;
+
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+  }
+
+  .name-lang{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .star-spark {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .fa-star {
+    font-size: 1.4rem;
+    align-self: center;
+  }
+
+  .star {
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    margin: 2.4rem 10rem;
+    justify-content: space-around;
+    border: 1px solid #E1E4E8;
+    border-radius: 1px;
+    background-color: #eff3f6;
+    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+    width: 7rem;
+    height: 3rem;
+
+  }
+
+  .repo-name h2 {
+    font-size: 3rem;
+    height: 2rem;
+    margin-bottom: 10px;
+
+  }
+
+  .repo_name a {
+    width: 50%;
+
+
+  }
+  .descript {
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+
+  .lang-bar {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    color: #586068;
+    align-self: flex-start;
+
+  }
+
+  .bio-img {
+    height: 27rem;
+    width: 27rem;
+    overflow: hidden;
+  }
+
+  .orgOne {
   display: inline;
-  margin-left: 10px;
-  text-decoration: none;
-  color: white;
-}
+  }
 
-button {
-  border: none;
-  color: inherit;
-}
-// img {
-//   width: 50px;
-//   height: 50px;
-// }
+  .orgTwo {
+    display: inline;
+  }
 
-.fa-github {
-  width: 3rem;
-  height: 3rem;
-  margin: 5px;
-  padding: 5px;
-  font-size: 3rem;
-  color: white;
-}
+  .orgOne img {
+    width: 2.2rem;
+    height: 2.2rem;
 
-.nav-header {
-  background-color: black;
-  color: white;
-  height: 6rem;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+  }
 
-}
+  .orgTwo img {
+    width: 2.2rem;
+    height: 2.2rem;
 
-.nav-main {
-  font-size: 1.6rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
+  }
 
-.nav-left {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.nav-left input {
-  width: 25rem;
-  margin-left: 2rem;
-}
-
-.nav-right {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  // @media (max-width: 768px) {
+  //   display: flex;
+  //   flex-direction: row;
+  // }
+  @media (max-width: 1168px) {
+    .side-bar {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 
 
-}
-
-.fa-caret-down {
-  margin: 10px 5px;
-}
-
-.nav-right i {
-  font-size: 1.5rem;
-  color: white;
-  margin-left: 10px;
-}
-
-.nav-avatar {
-  height: 20px;
-  width: 20px;
-  margin-bottom: 5px;
-  border-radius: 3px;
-}
-
-.main {
-    margin-left: 3rem;
+  .side-bar {
+    margin-left: 6rem;
     margin-top: 3rem;
-}
-
-.profile-nav {
-  border-bottom: solid 1px #E1E4E8;
-}
-
-.pro-nav-buttons {
-  font-size: 2.2rem;
-  padding: 2px 10px;
-  margin: 10px 5px;
-  // border-bottom:  solid, 1px, #E1E4E8;
-}
-
-.nav-span {
-  font-size: 1.2rem;
-  font-weight: 600;
-  background-color: #E1E4E8;
-  width: 4px;
-  height: 4px;
-  border: 3px solid #E1E4E8;
-  border-radius: 50%;
-  padding-right: 6px;
-  padding-left: 6px;
-  margin-left: 5px;
-
-}
-
-.search-repos {
-  border-bottom: solid 1px #E1E4E8;
-  display: flex;
-  justify-content: space-between;
-}
-
-.search-repos input {
-  width: 50rem;
-  margin-right: 8px;
-  border: solid 1px #E1E4E8;
-  border-radius: 3px;
-  font-size: 1.4rem;
-  color: #E1E4E8;
-  align-self: center;
 
 
 
-}
+  }
 
-.search-repos button {
-  color: black;
-  background-color: #eff3f6;
-  background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
-  font-size: 1.4rem;
-  line-height: 20px;
-  padding: 6px 12px;
-  margin-right: 8px;
-  border: 1px solid #E1E4E8;
-  border-radius: 3px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  align-self: flex-end;
+  .img-status {
+    height: 30rem;
+    border: solid 1px #E1E4E8;
+    border-radius: 2px;
+    width: 27rem;
+    margin-bottom: 1.5rem;
+  }
 
-}
+  .name-login h1 {
+    // width: 27rem;
 
+  }
 
+  .name-login {
+    border-bottom: solid 1px #E1E4E8;
+    width: 27rem;
+  }
 
-.repo-card {
-  border-bottom: solid 1px #E1E4E8;
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.9rem;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-top: solid 1px #E1E4E8;
+  }
 
-  height: 10rem;
-  display: flex;
-  justify-content: space-between;
-
-
-}
-
-.name-lang{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.star-spark {
-  display: flex;
-  flex-direction: column;
-
-}
-
-.fa-star {
-  font-size: 1.4rem;
-  align-self: center;
-}
-
-.star {
-  font-size: 1.4rem;
-  font-weight: 600;
-  display: flex;
-  margin: 2.4rem 10rem;
-  justify-content: space-around;
-  border: 1px solid #E1E4E8;
-  border-radius: 1px;
-  background-color: #eff3f6;
-  background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
-  width: 7rem;
-  height: 3rem;
-
-}
-
-.repo-name {
-  font-size: 6rem;
-  margin: 0.5rem;
-  height: 2rem;
-
-}
-
-.repo_name a {
-  width: 50%;
-
-}
-
-.repo-list span {
-  font-size: 1rem;
-  color: #586068;
-  align-self: flex-start;
-
-}
-
-.bio-img {
-  height: 27rem;
-  width: 27rem;
-  overflow: hidden;
-}
-
-.orgOne {
-display: inline;
-}
-
-.orgTwo {
-  display: inline;
-}
-
-.orgOne img {
-  width: 2.2rem;
-  height: 2.2rem;
-
-}
-
-.orgTwo img {
-  width: 2.2rem;
-  height: 2.2rem;
-
-}
-
-.side-bar {
-  margin-left: 6rem;
-  margin-top: 3rem;
-}
-
-.img-status {
-  height: 30rem;
-  border: solid 1px #E1E4E8;
-  border-radius: 2px;
-  width: 27rem;
-  margin-bottom: 1.5rem;
-}
-
-.name-login h1 {
-  // width: 27rem;
-
-}
-
-.name-login {
-  border-bottom: solid 1px #E1E4E8;
-  width: 27rem;
-}
+  .footer i {
+    color: #E1E4E8;
+    position: relative;
+    bottom: 15px;
+  }

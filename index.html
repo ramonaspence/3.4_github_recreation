@@ -43,7 +43,7 @@
     <div class="row">
 
       <aside>
-        <div class="side-bar col-4">
+        <div class="side-bar col col-md-4">
           <section class="side-img-name"></section>
           <h6 class="org-title">Organizations</h6>
           <div class="orgOne"></div>
@@ -51,7 +51,7 @@
         </div>
       </aside>
 
-      <main class="main col-8">
+      <main class="main col-md-8">
         <div class="profile-nav">
 
         </div>
@@ -72,7 +72,22 @@
 
     </div>
   </div>
-
+  <footer class="container-fluid">
+    <div class="footer col-12">
+      <span>&copy; 2020 GitHub, Inc.</span>
+      <a href="#">Terms</a>
+      <a href="#">Security</a>
+      <a href="#">Status</a>
+      <a href="#">Help</a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#">Contact GitHub</a>
+      <a href="#">Pricing</a>
+      <a href="#">API</a>
+      <a href="#">Training</a>
+      <a href="#">Blog</a>
+      <a href="#">About</a>
+    </div>
+  </footer>
   <script id="header-nav" type="text/x-handlebars-template">
     <a href=""><i class="fas fa-bell"></i></a>
     <a href=""><i class="fas fa-plus"></i><i class="fas fa-caret-down"></i></a>
@@ -101,7 +116,10 @@
         <a href="{{html_url}}" class="repo-name">
           <h2>{{name}}</h2>
         </a>
-          <span>{{language}}
+        <span class="descript">{{#if description}}{{description}}{{/if}}</span>
+        <span class="forked-from"></span>
+
+          <span class="lang-bar">{{language}}
       Updated {{formatDate updated_at}} ago</span>
 
       </div>

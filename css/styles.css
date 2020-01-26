@@ -138,17 +138,22 @@ button {
   align-self: flex-end;
 }
 
+.repo-list {
+  margin: 20px 10px;
+}
+
 .repo-card {
   border-bottom: solid 1px #E1E4E8;
   height: 10rem;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
 .name-lang {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .star-spark {
@@ -175,18 +180,24 @@ button {
   height: 3rem;
 }
 
-.repo-name {
-  font-size: 6rem;
-  margin: 0.5rem;
+.repo-name h2 {
+  font-size: 3rem;
   height: 2rem;
+  margin-bottom: 10px;
 }
 
 .repo_name a {
   width: 50%;
 }
 
-.repo-list span {
-  font-size: 1rem;
+.descript {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+.lang-bar {
+  margin-top: 5px;
+  font-size: 1.2rem;
   color: #586068;
   align-self: flex-start;
 }
@@ -215,6 +226,12 @@ button {
   height: 2.2rem;
 }
 
+@media (max-width: 1168px) {
+  .side-bar {
+    display: flex;
+    flex-direction: row;
+  }
+}
 .side-bar {
   margin-left: 6rem;
   margin-top: 3rem;
@@ -231,6 +248,22 @@ button {
 .name-login {
   border-bottom: solid 1px #E1E4E8;
   width: 27rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.9rem;
+  margin-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-top: solid 1px #E1E4E8;
+}
+
+.footer i {
+  color: #E1E4E8;
+  position: relative;
+  bottom: 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */
