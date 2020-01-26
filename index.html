@@ -33,8 +33,7 @@
           </a>
           </section>
           <section class="nav-right col-3">
-          <i class="fas fa-bell"></i>
-          <i class="fas fa-plus"></i>
+
         </section>
 
       </div>
@@ -54,13 +53,7 @@
 
       <main class="main col-8">
         <div class="profile-nav">
-          <button class="pro-nav-buttons"><span>Overview</span></button>
-          <button class="pro-nav-buttons"><span>Repositories</span></button>
-          <button class="pro-nav-buttons"><span>Projects</span></button>
-          <button class="pro-nav-buttons"><span>Packages</span></button>
-          <button class="pro-nav-buttons"><span>Stars</span></button>
-          <button class="pro-nav-buttons"><span>Followers</span></button>
-          <button class="pro-nav-buttons"><span>Folowing</span></button>
+
         </div>
         <div class="search-repos">
           <input type="search" placeholder="     Find a repository...">
@@ -80,12 +73,28 @@
     </div>
   </div>
 
+  <script id="header-nav" type="text/x-handlebars-template">
+    <a href=""><i class="fas fa-bell"></i></a>
+    <a href=""><i class="fas fa-plus"></i><i class="fas fa-caret-down"></i></a>
+    <a href=""><img class="nav-avatar" src="{{avatar_url}}" alt="" /><i class="fas fa-caret-down"></i></a>
+
+  </script>
 
 
+  <script id="prof_nav_template" type="text/x-handlebars-tempate">
+    <button class="pro-nav-buttons"><span>Overview</span></button>
+    <button class="pro-nav-buttons"><span>Repositories<span class="nav-span">{{public_repos}}</span></span></button>
+    <button class="pro-nav-buttons"><span>Projects<span class="nav-span"></span></span></button>
+    <button class="pro-nav-buttons"><span>Packages<span class="nav-span"></span></span></button>
+    <button class="pro-nav-buttons"><span>Stars<span class="nav-span"></span></span></button>
+    <button class="pro-nav-buttons"><span>Followers<span class="nav-span">{{followers}}</span></span></button>
+    <button class="pro-nav-buttons"><span>Following<span class="nav-span">{{following}}</span></span></button>
 
+  </script>
 
 
   <script id="repo_template" type="text/x-handlebars-template">
+
     {{#repos}}
       <div class="repo-card">
         <div class="name-lang">
@@ -93,11 +102,11 @@
           <h2>{{name}}</h2>
         </a>
           <span>{{language}}
-      {{updated_at}}</span>
+      Updated {{formatDate updated_at}} ago</span>
 
       </div>
       <div class="star-spark">
-        <button class="star">Star</button>
+        <button class="star"><i class="fas fa-star"></i>Star</button>
       </div>
       </div>
     {{/repos}}
@@ -132,6 +141,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
 
 
